@@ -15,8 +15,8 @@ try:
         blue_button.click()
         sleep(5)
     # Кликаем на ок в модальном окне
-        chrome.switch_to.alert.accept()
-        
+        chrome.switch_to.alert.accept()      
+
 
 except Exception as ex:
     print(ex)
