@@ -1,5 +1,5 @@
 Локатор кнопки Войти - <//span [text()='Войти']>
 Локатор кнопки Заказы - <//span [text()='Заказы']>
-Локатор ссылки OZON Job (в футере) - <[href="https://job.ozon.ru/?perehod=footer"][class="h5a d4f"]>
+Локатор ссылки OZON Job (в футере) - <$('[href="https://job.ozon.ru/?perehod=footer"]')>
 Локатор выбора валюты (верхний левый угол страницы) - <[data-widget="selectedCurrency"]>
 Локатор выпадашки Везде (в поисковой строке) - <[title="Везде"]>

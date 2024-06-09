@@ -3,5 +3,5 @@
 Локатор поля Куда - <[placeholder="Куда"]>
 Локатор поля Когда - <[data-test-id="start-date-field"]>
 Локатор поля Обратно - <[data-test-id="end-date-field"]>
-Локатор чек-бокса "Открыть Ostrovok.ru в новой вкладке" - <.s__XM8ZO5vgPE3EvHQrwWsZ>
+Локатор чек-бокса "Открыть Ostrovok.ru в новой вкладке" - <[data-test-id="checkbox"]>
 Локатор кнопки Найти билеты - <[data-test-id="form-submit"]>
