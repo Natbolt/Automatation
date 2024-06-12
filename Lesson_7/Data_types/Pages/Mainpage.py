@@ -4,14 +4,15 @@ from selenium.webdriver.common.by import By
 from Lesson_7.constants import Test_form_URL
 from Lesson_7.Data_types.data import *
 
+
 class MainPage:
     def __init__(self, browser):
         self.browser = browser
         self.browser.get(Test_form_URL)
 
 
-
     # Находим необходимые поля для заполнения на главной странице
+
     def find_fields(self):
         self._first_name = (By.NAME, "first-name")
         self._last_name = (By.NAME, "last-name")
