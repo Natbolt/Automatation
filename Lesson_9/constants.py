@@ -1,2 +1,2 @@
 # Приложение X-Clients
-X_client_URL = "https://x-clients-be.onrender.com"
+url = "https://x-clients-be.onrender.com"

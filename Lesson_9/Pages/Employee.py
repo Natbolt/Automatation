@@ -1,23 +1,11 @@
 import requests
 import json
-from Lesson_9.conftest import X_client_URL
+from conftest import url
 
 path = '/employee/'
 
-
-class Company:
-    def __init__(self, url=X_client_URL):
-        self.url = url
-
-    # Последняя созданная активная компания
-    def last_active_company_id(self):
-        active_params = {'active': 'true'}
-        response = requests.get(
-            self.url + '/company', params = active_params)
-        return response.json()[-1]['id']
-    
 class Employer:
-    def __init__(self, url=X_client_URL):
+    def __init__(self, url=url):
         self.url = url
     
     # Получить список сотрудников для компании
@@ -25,7 +13,7 @@ class Employer:
         company = {'company': company_id}
         response = requests.get(
             self.url + '/employee', params=company)
-        return response.json()\
+        return response.json()
         
     # Добавить нового сотрудника
     def add_new(self, token: str, body: json):
