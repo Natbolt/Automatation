@@ -3,7 +3,9 @@ from Pages.DataBase import DataBase
 
 
 api = Employer("https://x-clients-be.onrender.com")
-db = DataBase("postgresql://x_clients_db_3fmx_user:mzoTw2Vp4Ox4NQH0XKN3KumdyAYE31uq@dpg-cour99g21fec73bsgvug-a.oregon-postgres.render.com/x_clients_db_3fmx")
+db = DataBase(
+    "postgresql://x_clients_db_3fmx_user:mzoTw2Vp4Ox4NQH0XKN3KumdyAYE31uq@dpg-cour99g21fec73bsgvug-a.oregon-postgres.render.com/x_clients_db_3fmx")
+
 
 # Получем список компаний
 def test_get_list_of_employers():
@@ -17,6 +19,7 @@ def test_get_list_of_employers():
     employer_id = response["id"]
     db.delete_employer(employer_id)
     db.delete(max_id)
+
 
 # Добавление сотрудника в БД и сравнение с АПИ имяб статус и фамилию
 def test_add_new_employer():
@@ -32,7 +35,9 @@ def test_add_new_employer():
     db.delete_employer(employer_id)
     db.delete(max_id)
 
-# Сравниваем информацию о сотруднике полученную по API с информацией указанной при создании сотрудника
+
+# Сравниваем информацию о сотруднике полученную 
+# по API с информацией указанной при создании сотрудника
 def test_assertion_data():
     db.create_company('Employer get id company', 'new')
     max_id = db.last_company_id()
@@ -45,7 +50,9 @@ def test_assertion_data():
     db.delete_employer(employer_id)
     db.delete(max_id)
 
-# Сравниваем информацию о сотруднике полученную по API с измененной информацией в БД о сотруднике
+
+# Сравниваем информацию о сотруднике полученную 
+# по API с измененной информацией в БД о сотруднике
 def test_update_user_info():
     db.create_company('New updating company', 'test')
     max_id = db.last_company_id()

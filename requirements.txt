@@ -5,3 +5,4 @@ SQLAlchemy==1.4.50
 psycopg2-binary==2.9.9
 greenlet==3.0.3
 typing_extensions==4.11.0
+allure-pytest==2.13.5
